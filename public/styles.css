@@ -1,0 +1,178 @@
+/* ============================
+   Variáveis Globais
+============================ */
+:root {
+  --cor-principal: #0068ff;
+  --cor-texto: #000000;
+  --cor-hover-botao: deepskyblue;
+  --cor-fundo-login: rgba(9, 35, 233, 0.8);
+  --fonte-primaria: "Montserrat", sans-serif;
+  --fonte-secundaria: "Questrial", sans-serif;
+}
+
+/* Fundo */
+body {
+  background-image: url(backgroundimage.png);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--fonte-primaria);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  color: var(--cor-principal);
+}
+
+.navbar-brand:hover {
+  color: var(--cor-hover-botao);
+}
+
+.textos-cabecalho{
+  padding-top: 40px;
+
+  /* Grid simple: ambos elementos vão para a mesma célula, sobrepondo-se */
+  display: grid;
+  place-items: center; /* centraliza horizontal e verticalmente dentro da célula */
+  position: relative;
+  gap: 0;
+}
+
+/* palavra de fundo */
+.Curso {
+  grid-area: 1 / 1;        /* coloca na célula 1/1 */
+  margin: 0;
+  opacity: 0.25;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  font-size: clamp(60px, 12vw, 120px);
+}
+
+/* frase sobreposta, exatamente no mesmo centro */
+.TituloMeio{
+  grid-area: 1 / 1;        /* mesma célula -> sobreposição */
+  margin: 0;
+  z-index: 2;
+  text-align: center;
+  color: var(--cor-principal);
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: clamp(20px, 4.2vw, 56px);
+}
+
+/* Imagem principal (mais próxima do título) */
+.image-container{
+  max-width: 420px;
+  margin: 8px auto 0; /* reduz o espaço entre título e imagem */
+  text-align: center;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: auto;
+}
+
+.logoeafc {
+  width: 100%;
+}
+
+/* Texto Aprenda */
+.Textoaprenda {
+  font-family: var(--fonte-secundaria);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--cor-principal);
+  padding-top: 30px;
+}
+
+/* Caixa perguntas */
+.Caixaperguntas h1 {
+  font-family: var(--fonte-primaria);
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-principal);
+  margin-bottom: 30px;
+}
+
+.Caixaperguntas p {
+  font-family: var(--fonte-secundaria);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--cor-principal);
+  margin-top: 20px;
+}
+
+.Caixaperguntas h2 {
+  font-family: var(--fonte-secundaria);
+  text-align: justify;
+  font-size: 24px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Tela de Login */
+.Tela-login {
+  background-color: var(--cor-fundo-login);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  border-radius: 15px;
+  color: white;
+  width: 400px;
+  max-width: 90%;
+}
+
+input, button {
+  width: 100%;
+  border-radius: 10px;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 15px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-hover-botao);
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media (max-width: 992px) {
+  .Curso { font-size: 80px; }
+  .TituloMeio { font-size: 32px; }
+  .Textoaprenda { font-size: 28px; }
+}
+
+@media (max-width: 576px) {
+  .Curso { font-size: 50px; }
+  .TituloMeio { font-size: 22px; }
+  .Textoaprenda { font-size: 18px; padding-top: 15px; }
+  .image-container { max-width: 250px; }
+}
