@@ -98,7 +98,7 @@ body {
   margin-bottom: 30px;
 }
 
-.Caixaperguntas p {
+.Caixaperguntas h2 {
   font-family: var(--fonte-secundaria);
   font-size: 28px;
   font-weight: 600;
@@ -106,7 +106,7 @@ body {
   margin-top: 20px;
 }
 
-.Caixaperguntas h2 {
+.Caixaperguntas p {
   font-family: var(--fonte-secundaria);
   text-align: justify;
   font-size: 24px;
